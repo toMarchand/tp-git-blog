@@ -26,10 +26,9 @@
 
 \maketitle
 
-\section*{Préparation}
-Avant toute chose aller sur le serveur gitlab de l'IUT : \url{https://git.iut-info.univ-lille1.fr} et se connecter avec le login des salles de TP.
-
 \section*{Présentation}
+
+Git est un logiciel de gestion de versions décentralisé. C'est le plus utilisé, d'après openhub.net il représente à lui seul plus de 89\% des projets utilisant un gestionnaire de versions décentralisé.
 
 \subsection*{Des objets}
 Un dépôt Git peut être vu comme une collection d’objets liés entre eux. 
@@ -76,13 +75,13 @@ git config --global user.name 'Jean Dupont'
 
 \section*{L'espace de travail}
 
-À partir de là nous allons construire un annuaire en ligne de tous les élèves de la promotion. 
+À partir de là nous allons construire un blog de promotion.
 
 \subsection*{Initialisation}
 Création d'un dépôt local
-\begin{verbatim}
-mkdir /tmp/annuaire
-cd /tmp/annuaire
+un blog en ligne de tous les élèves de la promotion. \begin{verbatim}
+mkdir /tmp/blog
+cd /tmp/blog
 git init .
 \end{verbatim}
 
@@ -150,7 +149,7 @@ git add satoshi-tajiri.mkd
 git commit -m "Ajout du Cv de Satoshi Tajiri"
 \end{verbatim}
 
-Nous construisons l'annuaire de la promo ... 
+Nous construisons l'blog de la promo ... 
 \begin{verbatim}
 git rm satoshi-tajiri.mkd
 git commit -m "suppession du CV de Satoshi Tajiri"
@@ -254,7 +253,7 @@ make pok
 git clean -f
 \end{verbatim}
 
-Modifiez le fichier changelog pour indiquer que la nouvelle version de l'annuaire comporte votre nom
+Modifiez le fichier changelog pour indiquer que la nouvelle version de l'blog comporte votre nom
 \begin{verbatim}
 gedit changelog
 \end{verbatim}
@@ -265,10 +264,10 @@ gedit changelog
 \begin{verbatim}
 <<<<<<< HEAD
 DD MM YYYY : Monsieur Patate <monsieur@patate.org>
-- Monsieur Patate est dans l'annuaire
+- Monsieur Patate est dans l'blog
 =======
 DD MM YYYY : Madame Patate <madame@patate.org>
-- Madame Patate est dans l'annuaire
+- Madame Patate est dans l'blog
 >>>>>>> branch-a
 \end{verbatim}
 
