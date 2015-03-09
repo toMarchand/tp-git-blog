@@ -14,9 +14,9 @@
    height="350"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="espaces.svg"
-   inkscape:export-filename="/home/tom/Documents/univ-lille1/git_s2/espaces.png"
+   inkscape:export-filename="/home/tom/tmp/tclavier/tp-git-blog/latex/espaces.png"
    inkscape:export-xdpi="98"
    inkscape:export-ydpi="98">
   <defs
@@ -455,16 +455,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="393.29357"
-     inkscape:cy="42.369199"
+     inkscape:zoom="1.4"
+     inkscape:cx="389.55196"
+     inkscape:cy="170.99505"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="718"
      inkscape:window-x="0"
-     inkscape:window-y="19"
+     inkscape:window-y="331"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -487,38 +487,35 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-101.85714,-211.93829)">
+    <rect
+       style="fill:#eeeeec;fill-opacity:1;stroke:#2e3436;stroke-width:2.02319454999999992;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985"
+       width="188.5471"
+       height="347.97681"
+       x="102.86874"
+       y="212.94989"
+       rx="1.1538804"
+       ry="2.4071729" />
     <g
-       id="g9736">
+       id="g9726">
+      <rect
+         ry="2.3481476"
+         rx="1.1540323"
+         y="212.93747"
+         x="305.57117"
+         height="348.00165"
+         width="180.00047"
+         id="rect2987"
+         style="fill:#d3d7cf;fill-opacity:1;stroke:#2e3436;stroke-width:1.99836730999999990;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <rect
          ry="2.4071729"
-         rx="1.1538804"
+         rx="1.1538781"
          y="212.94989"
-         x="102.86874"
+         x="501.15558"
          height="347.97681"
-         width="188.5471"
-         id="rect2985"
-         style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2.02319455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <g
-         id="g9726">
-        <rect
-           style="fill:#fcaf3e;fill-opacity:1;stroke:#ce5c00;stroke-width:1.99836731;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-           id="rect2987"
-           width="180.00047"
-           height="348.00165"
-           x="305.57117"
-           y="212.93747"
-           rx="1.1540323"
-           ry="2.3481476" />
-        <rect
-           style="fill:#e9b96e;fill-opacity:1;stroke:#8f5902;stroke-width:2.02319264;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-           id="rect2989"
-           width="185.68994"
-           height="347.97681"
-           x="501.15558"
-           y="212.94989"
-           rx="1.1538781"
-           ry="2.4071729" />
-      </g>
+         width="185.68994"
+         id="rect2989"
+         style="fill:#babdb6;fill-opacity:1;stroke:#2e3436;stroke-width:2.02319263999999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     </g>
     <text
        xml:space="preserve"
@@ -552,7 +549,7 @@
          sodipodi:role="line"
          id="tspan3001"
          x="549.62067"
-         y="246.63324">Hustorique</tspan></text>
+         y="246.63324">Historique</tspan></text>
     <g
        id="g9694"
        transform="translate(0,-38)">
