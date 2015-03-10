@@ -46,6 +46,11 @@ Le répertoire de travail est lui-même un objet de type <<arborescences>>.
 L'historique d'un dépôt Git c'est l'ensemble des versions du répertoire de travail. Pour identifier une version, Git s'appuie sur un objet de type <<commit>>. 
 L'objet de type <<commit>> associe de nombreuses informations comme l'auteur, un message, une version de l'objet répertoire de travail mais aussi les <<commits> parents.
 
+\begin{figure}[h]
+  \center
+  \includegraphics{graphs}
+  \caption{Historiques de commits}
+\end{figure}
 %TODO 3 schémas : graph de versions (branches) graphs de commits et tree + blob
 
 \subsection*{Les espaces}
@@ -62,14 +67,22 @@ L'index contient les données en préparation pour le commit
 
 La tête (HEAD) de l'historique contient le dernier commit.
 
-\scalebox{0.7}{ \includegraphics{espaces}}
+\begin{figure}[h]
+  \center
+  \scalebox{0.7}{ \includegraphics{espaces}}
+  \caption{3 espaces de données}
+\end{figure}
 
 \subsection*{À distance}
 Avec les commandes push, pull et fetch, il est possible d'envoyer ou de recevoir la totalité de l'historique d'une branche vers un serveur distant. Ce qui permet de travailler à plusieurs sur le même projet.
 
 \vspace{2mm}
 
-\scalebox{0.7}{ \includegraphics{remote}}
+\begin{figure}[h]
+  \center
+  \scalebox{0.7}{ \includegraphics{remote}}
+  \caption{Serveurs distants}
+\end{figure}
 
 \section*{Resources}
 Pour avoir de l'aide sur git, il est possible de lancer "man git". Pour
@@ -206,6 +219,16 @@ Change la version de travail par une branche ou les fichiers du dernier commit
 \begin{verbatim}
 git checkout ma-branch
 \end{verbatim}
+
+\subsection*{cherry-pick}
+Permet de prendre un commit quelconque et de l'appliquer localement.
+
+Exemple : 
+\begin{verbatim}
+git cherry-pick ma-branche
+\end{verbatim}
+Permet d'appliquer le dernier commit de la branche <<ma-branche>> dans la branche courante.
+
 \section{Fichiers particulier}
 
 \subsection*{.gitignore}

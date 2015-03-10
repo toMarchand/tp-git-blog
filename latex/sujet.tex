@@ -43,7 +43,7 @@ Dans ce blog, tous les articles sont rédigé en utilisant le format Markdown (\
 \subsubsection{Premier changement}
 Dans l'espace de travail que vous avez initialisez comme dépôt local, créez un sous répertoire <<content>>.
 
-Avec votre voisin choisissez un sujet puis créez le même article <<content/[votre-sujet].md>> chacun dans votre dépôt local avec le contenu suivant : 
+Avec votre voisin choisissez un sujet, puis créez le même article <<content/[votre-sujet].md>> chacun dans votre dépôt local avec le contenu suivant : 
 
 \begin{verbatim}
 +++
@@ -55,6 +55,8 @@ title = "le sujet"
 
 # Le premier titre
 \end{verbatim}
+
+Vous pouvez par exemple faire un article avec les réponses à ce TP.
 
 L'ajouter dans l'index comme fichier à suivre, puis validez le changement et enfin observez l'historique des changements, quelles sont les informations disponibles ? À quoi correspond chaque champ ?
 
@@ -138,7 +140,7 @@ Expliquer ce qui c'est passé.
 
 \begin{itemize}
   \item Ajoutez une branche "nom-prenom-rebase", 
-  \item dans cette branche modifiez votre CV, puis commitez (faire au moins 2 modifications et 2 commits). 
+  \item dans cette branche modifiez votre article (en fin de fichier), puis validez votre commit (faire au moins 2 modifications et 2 commits). 
   \item Revenez sur la branche master, 
   \item et faites à nouveau 2 modifications en début de fichier (avec 2 commits) 
   \item puis <<rebasez>>.
@@ -168,6 +170,7 @@ git blame
 git format-patch
 git send-email
 git archive
+git revert
 \end{verbatim}
 
 \end{document}
