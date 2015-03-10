@@ -9,4 +9,5 @@ title = "Sujet de TP git"
 À travers la création d'un blog, vous allez tous ensemble apprendre à manipuler git, le plus utilisé de tous les logiciel de gestion de versions décentralisés. 
 
 * [Le sujet](/sujet.pdf)
+* [Le mémo git](/memo.pdf)
 
