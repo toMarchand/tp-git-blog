@@ -117,6 +117,8 @@ Enregistrez et partagez vos modifications, que se passe-t-il ?
 
 \section{Gérer le code}
 
+Pour cette partie du TP, il est préférable de ne plus faire de pull ou de push.
+
 Pour identifier un commit avec un nom facile à retenir, il est possible de poser un tag. C'est par exemple utilisé pour marquer une version donnée.
 
 \subsection{Des branches}
@@ -153,6 +155,24 @@ git log --graph --oneline --all
 
 Expliquez ce qui c'est passé.
 
+\subsection{Stash}
+
+Il est possible de mettre son travail de coté pour lancer des opérations plus urgente, par exemple une fusion.
+
+\begin{itemize}
+  \item modifiez votre article, puis validez le commit,
+  \item modifiez votre article sans validez le commit,
+  \item faire un <<git stash>>
+  \item observer le contenu de votre article
+  \item modifiez votre article sans validez le commit,
+  \item faire un <<git stash>>
+  \item observer le contenu de votre article
+  \item faire un <<git stash pop>> 
+  \item observer le contenu de votre article
+\end{itemize}
+
+Expliquez ce qui c'est passé.
+
 \section{Plus loin}
 
 Expliquez chacune des commandes suivantes :
@@ -160,10 +180,8 @@ Expliquez chacune des commandes suivantes :
 git log --graph --pretty=format:\
 '%Cred%h%Creset -%C(yellow)%d%Creset \
 %s %C(bold blue)<%an>%Creset%n' --abbrev-commit --all
-git stash 
-git stash pop
 git bisect
-git staged
+git stage
 git unstage
 git fix 
 git blame 
