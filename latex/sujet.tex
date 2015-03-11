@@ -173,6 +173,18 @@ Il est possible de mettre son travail de coté pour lancer des opérations plus 
 
 Expliquez ce qui c'est passé.
 
+\subsection{Squash}
+
+Il est possible de fusionner plusieurs commits.
+
+\begin{itemize}
+  \item Créez une nouvelle branche et basculer dedans,
+  \item modifiez votre article, puis validez votre commit (faire au moins 4 modifications et 4 commits). 
+  \item à l'aide de <<git rebase -i >> fusionner les commits 2 par 2
+\end{itemize}
+
+Expliquez ce qui c'est passé.
+
 \section{Plus loin}
 
 Expliquez chacune des commandes suivantes :
@@ -183,7 +195,6 @@ git log --graph --pretty=format:\
 git bisect
 git stage
 git unstage
-git fix 
 git blame 
 git format-patch
 git send-email
