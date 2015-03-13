@@ -43,7 +43,7 @@ Dans ce blog, tous les articles sont rédigé en utilisant le format Markdown (\
 \subsubsection{Premier changement}
 Dans l'espace de travail que vous avez initialisez comme dépôt local, créez un sous répertoire <<content>>.
 
-Avec votre voisin choisissez un sujet, puis créez le même article <<content/[votre-sujet].md>> chacun dans votre dépôt local avec le contenu suivant : 
+Avec votre voisin choisissez un sujet, puis créez le même article <<content/votre-sujet.md>> chacun dans votre dépôt local avec le contenu suivant : 
 
 \begin{verbatim}
 +++
@@ -66,10 +66,13 @@ Ajoutez quelques informations dans votre article puis validez un nouveau commit.
 Comment obtenir le diff entre les 2 derniers commits ?
 
 \subsubsection{Suppression}
-Créez un article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
-Supprimez l'article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
+\begin{itemize}
+\item Créez un article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
+\item Supprimez l'article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
+\end{itemize}
 
 Que voit-on dans l'historique ?
+Comment faire pour retrouver le fichier en question ?
 
 \section{Partager}
 
@@ -110,10 +113,13 @@ Est-il normale d'enregistrer du code généré ?
 
 Pour ignorer tout le répertoire de génération modifions le fichier .gitignore
 \begin{verbatim}
-gedit .gitignore
+vi .gitignore
 \end{verbatim}
 
-Enregistrez et partagez vos modifications, que se passe-t-il ? 
+Observez le changement dans <<git status>>.
+
+Merci de ne pas enregistrer ce dernier changement pour laissez vos camarades expérimenter la même chose.
+
 
 \section{Gérer le code}
 
