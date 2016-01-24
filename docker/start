@@ -1,14 +1,5 @@
 #!/bin/bash
 
-if ! [ -d /repositories/tp-git.git ] 
-then 
-  cd /repositories/
-  git init --bare tp-git.git
-  cp /root/post-receive /repositories/tp-git.git/hooks/post-receive
-  chmod +x /repositories/tp-git.git/hooks/post-receive
-  chown -R www-data:www-data .
-fi
-
 chown www-data:www-data /var/www
 
 /etc/init.d/apache2 start
