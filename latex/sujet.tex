@@ -49,10 +49,10 @@ Avec votre voisin choisissez un sujet, puis créez le même article <<content/vo
 +++
 date = "AAAA-MM-DDT12:00:00+01:00"
 draft = true
-title = "le sujet"
+title = "Mes réponses au TP Git"
 +++
 
-# TP Git S2
+# TP Git
 \end{verbatim}
 
 Attention, <<AAAA-MM-DD>> est la date du jour au format Année-mois-jour.
@@ -69,14 +69,14 @@ Par exemple :
 +++
 date = "AAAA-MM-DDT12:00:00+01:00"
 draft = true
-title = "le sujet"
+title = "Mes réponses au TP Git"
 +++
 
-# TP Git S2
+# TP Git
 ## Configuration
 
-    git config --global user.name "Thomas Clavier"
-    git config --global user.email "thomas.clavier@univ-lille1.fr"
+    git config --global user.name "Pierre Dupond"
+    git config --global user.email "pierre.dupond@univ-lille1.fr"
     git config --global http.proxy http://cache.univ-lille1.fr:3128
 
 \end{verbatim}
@@ -85,12 +85,40 @@ Comment obtenir le diff entre les 2 derniers commits ?
 
 \subsubsection{Suppression}
 \begin{itemize}
-\item Créez un article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
-\item Supprimez l'article <<content/satoshi-tajiri.md>> puis validez un nouveau commit. 
+\item Créez un article <<content/pokemon.md>> puis validez un nouveau commit. 
+\item Supprimez l'article <<content/pokemon.md>> puis validez un nouveau commit. 
 \end{itemize}
 
 Que voit-on dans l'historique ?
 Comment faire pour retrouver le fichier en question ?
+
+\subsubsection{Retour en arrière}
+joutez quelques informations dans votre article sans valider un nouveau commit.
+
+Comment faire pour annuler le travail et revenir à la dernier version <<commité>> du fichier ?
+
+
+\begin{itemize}
+  \item Créez un article <<content/satoshi-tajiri.md>> puis validez un nouveau commit.
+\end{itemize}
+
+Comment faire pour annuler ce commit et revenir avec une copie de travail sans ce dernier fichier en HEAD ?
+
+\subsubsection{Ignorer}
+
+Lançons la génération des pages html : 
+\begin{verbatim}
+./bin/hugo --theme=hyde --buildDrafts
+\end{verbatim}
+
+Que donne la commande suivante ? Pourquoi ? 
+\begin{verbatim}
+git status
+\end{verbatim}
+
+Est-il normale d'enregistrer du code généré ? 
+
+Comment faire pour ignorer les nouveaux fichiers présent dans le répertoire <<public>> ?
 
 \section{Partager}
 
@@ -116,28 +144,6 @@ git clone url
 \end{verbatim}
 
 Quelles sont les formes d'URL possibles ?
-
-Lançons la génération des pages html : 
-\begin{verbatim}
-./bin/hugo --theme=hyde --buildDrafts
-\end{verbatim}
-
-Que donne la commande suivante ? Pourquoi ? 
-\begin{verbatim}
-git status
-\end{verbatim}
-
-Est-il normale d'enregistrer du code généré ? 
-
-Pour ignorer tout le répertoire de génération modifions le fichier .gitignore
-\begin{verbatim}
-vi .gitignore
-\end{verbatim}
-
-Observez le changement dans <<git status>>.
-
-Merci de ne pas enregistrer ce dernier changement pour laissez vos camarades expérimenter la même chose.
-
 
 \section{Gérer le code}
 
@@ -199,10 +205,10 @@ Expliquez ce qui c'est passé.
 
 \subsection{Squash}
 
-Il est possible de fusionner plusieurs commits.
+Il est possible de réécrire l'hitoire, par exemple pour fusionner plusieurs commits.
 
 \begin{itemize}
-  \item Créez une nouvelle branche et basculer dedans,
+  \item Créez une nouvelle branche <<nom-prenom-squash>> et basculer dedans,
   \item modifiez votre article, puis validez votre commit (faire au moins 4 modifications et 4 commits). 
   \item à l'aide de <<git rebase -i >> fusionner les commits 2 par 2
 \end{itemize}
@@ -223,7 +229,6 @@ git blame
 git format-patch
 git send-email
 git archive
-git revert
 \end{verbatim}
 
 \end{document}

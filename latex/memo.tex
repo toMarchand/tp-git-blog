@@ -30,6 +30,8 @@
 
 Git est un logiciel de gestion de versions décentralisé.
 
+Ce mémo est un extrait du livre : \url{https://git-scm.com/book/fr}
+
 \subsection*{Des objets}
 Un dépôt Git peut être vu comme une collection d’objets liés entre eux. 
 Chaque objet est identifié par une chaîne de 40 caractères hexadécimaux
@@ -233,6 +235,15 @@ Permet d'appliquer le dernier commit de la branche <<ma-branche>> dans la branch
 
 \subsection*{.gitignore}
 Liste des fichiers ou répertoires que git doit ignorer
+
+\subsection*{revert}
+Crée un patch de retour en arrière affin d'annuler certains commits.
+
+\begin{verbatim}
+git revert HEAD~3
+\end{verbatim}
+Va créer un patch pour annuler les 4 derniers commits.
+
 
 \end{document}
 
