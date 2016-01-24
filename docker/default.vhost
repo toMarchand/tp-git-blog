@@ -1,7 +1,7 @@
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
 
-  DocumentRoot /var/www
+  DocumentRoot /var/www/public/
   <Directory />
     Options FollowSymLinks
     AllowOverride None
@@ -25,7 +25,14 @@
   SetEnv GIT_PROJECT_ROOT /repositories
   SetEnv GIT_HTTP_EXPORT_ALL
   SetEnv REMOTE_USER=$REDIRECT_REMOTE_USER
+  AliasMatch ^/git/(.*/objects/[0-9a-f]{2}/[0-9a-f]{38})$          /repositories/$1
+  AliasMatch ^/git/(.*/objects/pack/pack-[0-9a-f]{40}.(pack|idx))$ /repositories/$1
   ScriptAlias /git/ /usr/lib/git-core/git-http-backend/
+
+  <Location /git/>
+    Options +ExecCGI +SymLinksIfOwnerMatch
+    Require all granted
+  </Location>
    
 </VirtualHost>
 
