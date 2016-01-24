@@ -1,0 +1,31 @@
+<VirtualHost *:80>
+  ServerAdmin webmaster@localhost
+
+  DocumentRoot /var/www/public
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+  <Directory /var/www/>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    allow from all
+  </Directory>
+
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+
+  # Possible values include: debug, info, notice, warn, error, crit,
+  # alert, emerg.
+  LogLevel warn
+
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+  SetEnv GIT_PROJECT_ROOT /repositories
+  SetEnv GIT_HTTP_EXPORT_ALL
+  SetEnv REMOTE_USER=$REDIRECT_REMOTE_USER
+  ScriptAlias /git/ /usr/lib/git-core/git-http-backend/
+   
+</VirtualHost>
+

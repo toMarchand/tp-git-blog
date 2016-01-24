@@ -14,5 +14,5 @@ Le fonctionnement global est le suivant :
 
 Le premier push est fait par l'enseignant pour publier sur le site en question le projet avec le binaire hugo, le sujet et un petit mémo git. Ces 2 derniers documents sont modifiable dans le répertoire "latex".
 
-[Hugo](http://hugo.spf13.com/) est le moteur de blog qui est utilisé. Le hook s'attend à trouver le binaire dans le projet git dans le sous répertoire bin.
+[Hugo](http://hugo.spf13.com/) est le moteur de blog qui est utilisé.
 
