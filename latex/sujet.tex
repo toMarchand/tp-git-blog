@@ -28,7 +28,7 @@
 
 \section{configuration}
 
-Configurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
+À l'aide de la commande <<git config>> onfigurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
 
 \section{L'espace de travail}
 
@@ -38,7 +38,7 @@ Configurez votre nom (user.name) votre email (user.email) et le serveur mandatai
 Créez un répertoire de travail et initialisez le comme un dépôt git local.
 
 \subsection{Historique de version}
-Dans ce blog, tous les articles sont rédigé en utilisant le format Markdown (\url{http://daringfireball.net/projects/markdown/syntax}).
+Dans ce blog, tous les articles sont rédigés en utilisant le format Markdown (\url{http://daringfireball.net/projects/markdown/syntax}).
 
 \subsubsection{Premier article}
 Dans l'espace de travail que vous avez initialisé comme dépôt local, créez un sous répertoire <<content>>.
@@ -121,6 +121,11 @@ Expliquez le résultat de la commande suivante :
 git log --oneline --graph --decorate
 \end{verbatim}
 
+\subsection{Via un second dépôt}
+
+Aller sur le serveur git de l'iut : \url{https://git-iut.univ-lille1.fr/} ou sur un serveur publique comme \url{https://github.com/}, \url{https://bitbucket.org/} ou \url{https://gitlab.com}, une fois connecté créez un nouveau repository : tp-git-blog. Puis ajouter ce nouveau remote sous le nom <<kura>>. Faire un push vers ce dépôt et observer dans l'interface web le résultat.
+
+\subsection{Clone}
 Si l'on souhaite obtenir une copie de travail d'un dépôt distant existant il est possible d'utiliser la commande :
 \begin{verbatim}
 git clone url
@@ -128,7 +133,7 @@ git clone url
 
 Quelles sont les formes d'URL possibles ?
 
-\subsubsection{Ignorer}
+\subsection{Ignorer}
 
 Lançons la génération des pages html : 
 \begin{verbatim}
