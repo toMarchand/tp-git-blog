@@ -28,7 +28,7 @@
 
 \section{configuration}
 
-Configurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http//cache.univ-lille1.fr:3128/
+Configurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
 
 \section{L'espace de travail}
 
@@ -103,20 +103,6 @@ Comment faire pour annuler le travail et revenir à la dernier version <<commit�
 
 Comment faire pour annuler ce commit et revenir avec une copie de travail sans ce dernier fichier en HEAD ?
 
-\subsubsection{Ignorer}
-
-Lançons la génération des pages html : 
-\begin{verbatim}
-./bin/hugo --theme=hyde --buildDrafts
-\end{verbatim}
-
-Que donne la commande suivante ? Pourquoi ? 
-\begin{verbatim}
-git status
-\end{verbatim}
-
-Est-il normale d'enregistrer du code généré ?  Comment faire pour ignorer les nouveaux fichiers présent dans le répertoire <<public>> ?
-
 \section{Partager}
 
 \subsection{Via un dépôt partagé}
@@ -141,6 +127,20 @@ git clone url
 \end{verbatim}
 
 Quelles sont les formes d'URL possibles ?
+
+\subsubsection{Ignorer}
+
+Lançons la génération des pages html : 
+\begin{verbatim}
+./bin/hugo --theme=hyde --buildDrafts
+\end{verbatim}
+
+Que donne la commande suivante ? Pourquoi ? 
+\begin{verbatim}
+git status
+\end{verbatim}
+
+Est-il normale d'enregistrer du code généré ?  Comment faire pour ignorer les nouveaux fichiers présent dans le répertoire <<public>> ?
 
 \section{Gérer le code}
 
