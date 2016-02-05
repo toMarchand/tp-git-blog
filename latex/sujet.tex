@@ -28,7 +28,7 @@
 
 \section{configuration}
 
-À l'aide de la commande <<git config>> onfigurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
+À l'aide de la commande <<git config>> configurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
 
 \section{L'espace de travail}
 
@@ -47,15 +47,15 @@ Avec votre voisin choisissez un sujet, puis créez le même article <<content/vo
 
 \begin{verbatim}
 +++
-date = "AAAA-MM-DDT12:00:00+01:00"
+date = "2014-01-01T12:00:00+01:00"
 draft = true
-title = "Mes réponses au TP Git"
+title = "Mon sujet"
 +++
 
-# TP Git
+# Un titre
 \end{verbatim}
 
-Attention, <<AAAA-MM-DD>> est la date du jour au format Année-mois-jour.
+Attention, la date est au format iso 8601, elle représente la date de publication.
 
 Vous pouvez par exemple faire un article avec les réponses à ce TP.
 
@@ -67,12 +67,13 @@ Ajoutez quelques informations dans votre article puis validez un nouveau commit.
 Par exemple : 
 \begin{verbatim}
 +++
-date = "AAAA-MM-DDT12:00:00+01:00"
+date = "2014-01-01T12:00:00+01:00"
 draft = true
 title = "Mes réponses au TP Git"
 +++
 
 # TP Git
+
 ## Configuration
 
     git config --global user.name "Pierre Dupond"
@@ -93,7 +94,7 @@ Que voit-on dans l'historique ?
 Comment faire pour retrouver le fichier en question ?
 
 \subsubsection{Retour en arrière}
-joutez quelques informations dans votre article sans valider un nouveau commit.
+Ajoutez quelques informations dans votre article sans valider un nouveau commit.
 
 Comment faire pour annuler le travail et revenir à la dernier version <<commité>> du fichier ?
 
@@ -123,7 +124,7 @@ git log --oneline --graph --decorate
 
 \subsection{Via un second dépôt}
 
-Aller sur le serveur git de l'iut : \url{https://git-iut.univ-lille1.fr/} ou sur un serveur publique comme \url{https://github.com/}, \url{https://bitbucket.org/} ou \url{https://gitlab.com}, une fois connecté créez un nouveau repository : tp-git-blog. Puis ajouter ce nouveau remote sous le nom <<kura>>. Faire un push vers ce dépôt et observer dans l'interface web le résultat.
+Aller sur un serveur publique comme \url{https://github.com/}, \url{https://bitbucket.org/} ou \url{https://gitlab.com}, une fois connecté créez un nouveau repository : tp-git-blog. Puis ajouter ce nouveau remote sous le nom <<kura>>. Faire un push vers ce dépôt et observer dans l'interface web le résultat.
 
 \subsection{Clone}
 Si l'on souhaite obtenir une copie de travail d'un dépôt distant existant il est possible d'utiliser la commande :
