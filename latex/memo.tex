@@ -26,6 +26,10 @@
 
 \maketitle
 
+\section*{Introduction}
+
+L'ensemble de se cours est disponible sur \url{http://github.com/tclavier/tp-git-blog/} vous pouvez participer à son amélioration en proposant des <<pull request>>.
+
 \section*{Présentation}
 
 Git est un logiciel de gestion de versions décentralisé.
@@ -67,7 +71,7 @@ Le répertoire de travail présente dans un dossier de la machine, l'ensemble de
 
 L'index contient les données en préparation pour le commit
 
-La tête (HEAD) de l'historique contient le dernier commit.
+La tête (HEAD) de l'historique est un pointeur vers le commit qui sera utilisé comme prochain commit parent.
 
 \begin{figure}[h]
   \center
@@ -76,7 +80,7 @@ La tête (HEAD) de l'historique contient le dernier commit.
 \end{figure}
 
 \subsection*{À distance}
-Avec les commandes push, pull et fetch, il est possible d'envoyer ou de recevoir la totalité de l'historique d'une branche vers un serveur distant. Ce qui permet de travailler à plusieurs sur le même projet.
+Avec les commandes push, fetch et pull, il est possible d'envoyer ou de recevoir la totalité de l'historique d'une branche vers un serveur distant. Ce qui permet de travailler à plusieurs sur le même projet.
 
 \vspace{2mm}
 
@@ -98,6 +102,18 @@ Toutes les commandes git sont de la forme suivante :
 git action [options] argument
 \end{verbatim}
 
+\subsection*{add}
+Ajouter un fichier à suivre dans l'index. Pour préparer un commit.
+\begin{verbatim}
+git add chemin/vers/fichier
+\end{verbatim}
+
+\subsection*{commit}
+Valider l'index actuel pour créer un commit
+\begin{verbatim}
+git commit -m "Mon message de commit"
+\end{verbatim}
+
 \subsection*{config}
 
 Permet de configurer les variables de paramétrage de git
@@ -117,18 +133,6 @@ Initialiser un répertoire de travail comme un dépôt local git. Permet d'initi
 Exemple pour le répertoire courant : 
 \begin{verbatim}
 git init .
-\end{verbatim}
-
-\subsection*{add}
-Ajouter un fichier à suivre dans l'index. Pour préparer un commit.
-\begin{verbatim}
-git add chemin/vers/fichier
-\end{verbatim}
-
-\subsection*{commit}
-Valider l'index actuel pour créer un commit
-\begin{verbatim}
-git commit -m "Mon message de commit"
 \end{verbatim}
 
 \subsection*{log}
