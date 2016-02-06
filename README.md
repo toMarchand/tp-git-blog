@@ -9,7 +9,7 @@ Les principaux apprentissages sont les suivants :
 - utilisation de stash 
 
 Le fonctionnement global est le suivant : 
-- un conteneur docker hébergé sur [Deliverous](http://deliverous.com) sert à la fois de serveur centrale git et de serveur de publication.
+- un conteneur docker hébergé sur [Deliverous](http://deliverous.com) sert à la fois de serveur centrale git (http://git.iut.azae.net/git/tp-git.git) et de [serveur de publication](http://git.iut.azae.net/). 
 - à chaque push, un hook régénère l'ensemble des pages html du site avant de les mettre à disposition en http.
 
 Le premier push est fait par l'enseignant pour publier sur le site en question le projet avec le binaire hugo, le sujet et un petit mémo git. Ces 2 derniers documents sont modifiable dans le répertoire "latex".
