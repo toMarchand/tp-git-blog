@@ -45,14 +45,21 @@ Il y a 3 types d'objets :
 \item tree : les arborescences
 \item commit : une version du répertoire de travail
 \end{itemize}
-Un objet de type <<arborescence>> peut contenir des objets <<données>> et <<arborescence>>.
-Le répertoire de travail est lui-même un objet de type <<arborescences>>. 
+
+\begin{figure}
+  \center
+  \includegraphics{arbo_img}
+  \caption{3 types d'objets}
+  \label{objets}
+\end{figure}
+Comme illustré sur la figure \ref{objets} un <<commit>> est une image du répertoire de travail à un instant T. 
+Le répertoire de travail est lui-même un objet de type <<arborescence>> qui va contenir des objets <<données>> et <<arborescences>>.
 
 L'historique d'un dépôt Git c'est l'ensemble des versions du répertoire de travail. Pour identifier une version, Git s'appuie sur un objet de type <<commit>>. 
 L'objet de type <<commit>> associe de nombreuses informations comme l'auteur, un message, une version de l'objet répertoire de travail mais aussi les <<commits> parents. 
 Sur la figure \ref{graphs} on peut observer un historique de commit avec 3 branches.
 
-\begin{figure}[ht]
+\begin{figure}
   \center
   \includegraphics{graphs_img}
   \caption{Historiques de commits}
@@ -76,7 +83,7 @@ La tête (HEAD) de l'historique est un pointeur vers le commit qui sera utilisé
 
 Sur la figure \ref{espaces} illustre les impactes de différentes commandes sur les 3 espaces de données.
 
-\begin{figure}[ht]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{espaces_img}
   \caption{Les 3 espaces de données}
@@ -90,7 +97,7 @@ Ces commandes sont illustrés sur la figure \ref{remote}.
 
 \vspace{2mm}
 
-\begin{figure}[ht]
+\begin{figure}
   \center
   \includegraphics[width=\textwidth]{remote_img}
   \caption{Serveurs distants}
