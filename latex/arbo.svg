@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="arbo.svg"
-   inkscape:export-filename="/home/tom/tmp/tclavier/tp-git-blog/latex/graphs.png"
-   inkscape:export-xdpi="98"
-   inkscape:export-ydpi="98">
+   inkscape:export-filename="/home/tom/workspace/tclavier/tp-git-blog/latex/arbo.png"
+   inkscape:export-xdpi="178.75999"
+   inkscape:export-ydpi="178.75999">
   <defs
      id="defs3109" />
   <sodipodi:namedview
@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="171.90101"
+     inkscape:cx="65.329917"
      inkscape:cy="14.160871"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
