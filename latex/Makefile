@@ -1,10 +1,8 @@
-CLEAN=*~ *.rtf *.ps *.log *.dvi *.aux *.pdf *.out *.html *.css *.bak *.toc *.pl *.4ct *.4tc *.lg *.sxw *.tmp *.xref *.idv *.tns
+KEEP=.svg|.tex|Makefile
 INIT=*.odt
 CLS=*~ *.log *.aux *.out *.bak *.toc *.pl
 TEXFILES = $(wildcard *.tex)
-INPUTFILES = $(wildcard input/*.tex)
-SQLFILES = $(wildcard *.sql)
-PSFILES = $(patsubst %.tex,%.ps,$(TEXFILES))
+SVGFILES = $(wildcard *.svg)
 
 all: ps
 
@@ -12,8 +10,13 @@ all: ps
 	pdflatex  $<
 	pdflatex  $<
 
-clean:
-	-rm -f $(CLEAN)
+%_img.pdf: %.svg
+	inkscape -f $< --export-pdf=$@
 
-pdf: $(patsubst %.tex,%.pdf,$(TEXFILES)) 
+clean:
+	find . -maxdepth 1 -type f |egrep -v '($(KEEP))$$' | xargs rm -f	
+
+pdf: img $(patsubst %.tex,%.pdf,$(TEXFILES))
 	cp *.pdf ../public/
+
+img: $(patsubst %.svg,%_img.pdf,$(SVGFILES)) 

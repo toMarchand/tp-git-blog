@@ -1,7 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphics}
+\usepackage{graphicx}
 \usepackage{libertine}
 \usepackage{tango}
 %\usepackage[colorlinks=true]{hyperref}
@@ -28,7 +28,7 @@
 
 \section*{Introduction}
 
-L'ensemble de ce cours est disponible sur \url{http://github.com/tclavier/tp-git-blog/} vous pouvez participer à son amélioration en proposant des <<pull request>>.
+L'ensemble de ce mémo est disponible sur \url{http://github.com/tclavier/tp-git-blog/} vous pouvez participer à son amélioration en proposant des <<pull request>>.
 
 \section*{Présentation}
 
@@ -38,8 +38,7 @@ Ce mémo est un extrait du livre : \url{https://git-scm.com/book/fr}
 
 \subsection*{Des objets}
 Un dépôt Git peut être vu comme une collection d’objets liés entre eux. 
-Chaque objet est identifié par une chaîne de 40 caractères hexadécimaux
-correspondant à la somme de contrôle de son contenu. 
+Chaque objet est identifié par une chaîne de 40 caractères hexadécimaux correspondant à la somme de contrôle de son contenu. 
 Il y a 3 types d'objets : 
 \begin{itemize}
 \item blob : les données
@@ -50,12 +49,14 @@ Un objet de type <<arborescence>> peut contenir des objets <<données>> et <<arb
 Le répertoire de travail est lui-même un objet de type <<arborescences>>. 
 
 L'historique d'un dépôt Git c'est l'ensemble des versions du répertoire de travail. Pour identifier une version, Git s'appuie sur un objet de type <<commit>>. 
-L'objet de type <<commit>> associe de nombreuses informations comme l'auteur, un message, une version de l'objet répertoire de travail mais aussi les <<commits> parents.
+L'objet de type <<commit>> associe de nombreuses informations comme l'auteur, un message, une version de l'objet répertoire de travail mais aussi les <<commits> parents. 
+Sur la figure \ref{graphs} on peut observer un historique de commit avec 3 branches.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \center
-  \includegraphics{graphs}
+  \includegraphics{graphs_img}
   \caption{Historiques de commits}
+  \label{graphs}
 \end{figure}
 %TODO 3 schémas : graph de versions (branches) graphs de commits et tree + blob
 
@@ -73,27 +74,35 @@ L'index contient les données en préparation pour le commit
 
 La tête (HEAD) de l'historique est un pointeur vers le commit qui sera utilisé comme prochain commit parent.
 
-\begin{figure}[h]
-  \center
-  \scalebox{0.7}{ \includegraphics{espaces}}
-  \caption{3 espaces de données}
+Sur la figure \ref{espaces} illustre les impactes de différentes commandes sur les 3 espaces de données.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{espaces_img}
+  \caption{Les 3 espaces de données}
+  \label{espaces}
 \end{figure}
 
 \subsection*{À distance}
 Avec les commandes push, fetch et pull, il est possible d'envoyer ou de recevoir la totalité de l'historique d'une branche vers un serveur distant. Ce qui permet de travailler à plusieurs sur le même projet.
 
+Ces commandes sont illustrés sur la figure \ref{remote}.
+
 \vspace{2mm}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \center
-  \scalebox{0.7}{ \includegraphics{remote}}
+  \includegraphics[width=\textwidth]{remote_img}
   \caption{Serveurs distants}
+  \label{remote}
 \end{figure}
 
 \section*{Resources}
 Pour avoir de l'aide sur git, il est possible de lancer "man git". Pour
 avoir de l'aide sur la commande "git log" il est possible de lancer "man
 git-log".
+
+Le livre : \url{https://git-scm.com/book/fr} est une autre ressource importante.
 
 \section*{Principales commandes}
 
@@ -102,151 +111,34 @@ Toutes les commandes git sont de la forme suivante :
 git action [options] argument
 \end{verbatim}
 
-\subsection*{add}
-Ajouter un fichier à suivre dans l'index. Pour préparer un commit.
-\begin{verbatim}
-git add chemin/vers/fichier
-\end{verbatim}
+\input includes/add.tex
+\input includes/branch.tex
+\input includes/checkout.tex
+\input includes/cherry-pick.tex
+\input includes/clean.tex
+\input includes/clone.tex
+\input includes/commit.tex
+\input includes/config.tex
+\input includes/diff.tex
+\input includes/init.tex
+\input includes/log.tex
+\input includes/merge.tex
+\input includes/mv.tex
+\input includes/pull.tex
+\input includes/push.tex
+\input includes/rebase.tex
+\input includes/remote.tex
+\input includes/revert.tex
+\input includes/rm.tex
+\input includes/status.tex
+\input includes/tag.tex
 
-\subsection*{commit}
-Valider l'index actuel pour créer un commit
-\begin{verbatim}
-git commit -m "Mon message de commit"
-\end{verbatim}
 
-\subsection*{config}
-
-Permet de configurer les variables de paramétrage de git
-
-L'option \textit{global} permet de configurer les variables de l'utilisateur, donc valable pour l'ensemble des projets de l'utilisateur.
-
-L'option \textit{system} permet de configurer les variables de tous les utilisateurs.
-
-\begin{verbatim}
-git config --global user.name "Thomas Clavier"
-\end{verbatim}
-
-\subsection*{init}
-
-Initialiser un répertoire de travail comme un dépôt local git. Permet d'initialiser l'ensemble des 3 espaces.
-
-Exemple pour le répertoire courant : 
-\begin{verbatim}
-git init .
-\end{verbatim}
-
-\subsection*{log}
-Observer l'historique des changements
-\begin{verbatim}
-git log
-\end{verbatim}
-
-\subsection*{diff}
-Observer la différence entre 2 commits, permet par exemple de voir quelles sont les différences entre 2 commits sur un fichier donné.
-
-\begin{verbatim}
-git diff
-\end{verbatim}
-
-\subsection*{status}
-Observer l'état de l'index et du répertoire de travail
-\begin{verbatim}
-git status
-\end{verbatim}
-
-\subsection*{rm}
-Supprimer un fichier de l'index
-\begin{verbatim}
-git rm chemin/vers/fichier
-\end{verbatim}
-
-\subsection*{mv}
-Déplacer un fichier. C'est équivalent à copier le fichier puis supprimer le fichier d'origine.
-\begin{verbatim}
-git mv chemin/vers/fichier chemin/vers/nouveau/fichier
-\end{verbatim}
-
-\subsection*{remote}
-Permet de manipuler les adresses des adresses des index distants.
-\begin{verbatim}
-git remote add origin https://github.com/tclavier/tp-git-blog.git
-\end{verbatim}
-
-\subsection*{push}
-Permet d'envoyer une copie de l'index des changements vers un serveur distant
-\begin{verbatim}
-git push origin master
-\end{verbatim}
-
-\subsection*{pull}
-Permet de recevoir une copie de l'index d'un serveur distant
-\begin{verbatim}
-git pull origin master
-\end{verbatim}
-
-\subsection*{clone}
-Prépare une copie de travail depuis un serveur distant
-\begin{verbatim}
-git clone URL
-\end{verbatim}
-
-\subsection*{clean}
-Supprime les fichiers non suivis par git
-\begin{verbatim}
-git clean -f
-\end{verbatim}
-
-\subsection*{tag}
-Permet de poser une étiquette sur un commit donné.
-\begin{verbatim}
-git tag 1.0.0
-\end{verbatim}
-
-\subsection*{merge}
-Fusionne 2 branches.
-\begin{verbatim}
-git merge ma-branche
-\end{verbatim}
-
-\subsection*{rebase}
-Concatène 2 branches.
-\begin{verbatim}
-git rebase ma-branche
-\end{verbatim}
-
-\subsection*{branch}
-Crée un branche de travail
-\begin{verbatim}
-git branch ma-branch
-\end{verbatim}
-
-\subsection*{checkout}
-Change la version de travail par une branche ou les fichiers du dernier commit
-\begin{verbatim}
-git checkout ma-branch
-\end{verbatim}
-
-\subsection*{cherry-pick}
-Permet de prendre un commit quelconque et de l'appliquer localement.
-
-Exemple : 
-\begin{verbatim}
-git cherry-pick ma-branche
-\end{verbatim}
-Permet d'appliquer le dernier commit de la branche <<ma-branche>> dans la branche courante.
-
-\section{Fichiers particulier}
+\section*{Fichiers particulier}
 
 \subsection*{.gitignore}
 Liste des fichiers ou répertoires que git doit ignorer
 
-\subsection*{revert}
-Crée un patch de retour en arrière affin d'annuler certains commits.
-
-\begin{verbatim}
-git revert HEAD~3
-\end{verbatim}
-Va créer un patch pour annuler les 4 derniers commits.
 
 
 \end{document}
