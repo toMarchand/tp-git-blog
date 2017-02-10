@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphics}
-\usepackage{libertine}
+\usepackage[ttscale=.875]{libertine}
 \usepackage{tango}
 %\usepackage[colorlinks=true]{hyperref}
 
@@ -20,6 +20,8 @@
 \section{configuration}
 
 À l'aide de la commande <<git config>> configurez votre nom (user.name) votre email (user.email) et le serveur mandataire (http.proxy) dans git. L'URL du serveur mandataire de l'université est http://cache.univ-lille1.fr:3128
+
+Vérifier à l'aide de la commande <<git config --list>>
 
 \section{L'espace de travail}
 
@@ -50,7 +52,13 @@ Attention, la date de publication est au format iso 8601.
 
 Vous pouvez par exemple faire un article avec les réponses à ce TP.
 
-À l'aide de <<git add>>, <<git commit>> et <<git log>>, l'ajouter dans l'index comme fichier à suivre, puis validez le changement et enfin observez l'historique des changements, quelles sont les informations disponibles ? À quoi correspondent les champs ?
+À l'aide de <<git add>>, <<git commit>> et <<git log>>, l'ajouter dans l'index comme fichier à suivre, puis validez le changement. 
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* a0712c7 (HEAD -> master) Add my first article
+\end{verbatim}
+
+Observez l'historique des changements, quelles sont les informations disponibles ? À quoi correspondent les champs ?
 
 \subsubsection{Second changement}
 Ajoutez quelques informations dans votre article puis validez un nouveau commit.
@@ -73,6 +81,12 @@ title = "Mes réponses au TP Git"
 
 \end{verbatim}
 
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* b7f0aaa (HEAD -> master) Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
+
 Comment obtenir le diff entre les 2 derniers commits ?
 
 \subsubsection{Suppression}
@@ -81,13 +95,46 @@ Comment obtenir le diff entre les 2 derniers commits ?
 \item Supprimez l'article <<content/lego.md>> puis validez un nouveau commit. 
 \end{itemize}
 
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* 8c18094 (HEAD -> master) Remove article about Lego
+* c33514e Add article about Lego
+* b7f0aaa Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
+
 Que voit-on dans l'historique ?
 Comment, à l'aide de la commande <<git checkout>> peut-on retrouver le fichier en question ?
 
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* 8c18094 (master) Remove article about Lego
+* c33514e (HEAD) Add article about Lego
+* b7f0aaa Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
+
 \subsubsection{Retour en arrière}
+
+Revenir à la situation tel que la commande <<git log --oneline --decorate --graph --all>> vous donne :
+\begin{verbatim}
+* 8c18094 (HEAD -> master) Remove article about Lego
+* c33514e Add article about Lego
+* b7f0aaa Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
+
 Ajoutez quelques informations dans votre article sans valider un nouveau commit.
 
 Comment faire pour annuler le travail et revenir à la dernier version <<commité>> du fichier ?
+
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* 8c18094 (HEAD -> master) Remove article about Lego
+* c33514e Add article about Lego
+* b7f0aaa Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
 
 \begin{itemize}
   \item Créez un article <<content/satoshi-tajiri.md>> puis validez un nouveau commit.
@@ -95,23 +142,28 @@ Comment faire pour annuler le travail et revenir à la dernier version <<commit�
 
 Comment faire pour annuler ce dernier commit et revenir avec une copie de travail sans ce dernier fichier en HEAD ?
 
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+\begin{verbatim}
+* 655dc4c (HEAD -> master) Cancel "Add personal details in my article"
+* 8d292f3 Add personal details in my article
+* 8c18094 Remove article about Lego
+* c33514e Add article about Lego
+* b7f0aaa Add some content in my article
+* a0712c7 Add my first article
+\end{verbatim}
+
 \section{Partager}
 
 \subsection{Via un dépôt partagé}
 
-Indiquons à Git que nous souhaitons échanger des données avec le dépôt distant suivant : http://iut.azae.net/git/tp-git.git
+Indiquons à Git que nous souhaitons échanger des données avec le dépôt distant suivant : \begin{verbatim}http://iut.azae.net/git/tp-git.git\end{verbatim}
 Nous appelons ce dépôt <<origin>>.
 
 Puis envoyez l'ensemble des modifications de la branche courante (master) vers le dépôt <<origin>>
 
 Que se passe-t-il ?
 
-Visitez \url{http://git.iut.azae.net/} pour admirer votre travail.
-
-Expliquez le résultat de la commande suivante : 
-\begin{verbatim}
-git log --oneline --graph --decorate
-\end{verbatim}
+Visitez \url{http://iut.azae.net/} pour admirer votre travail.
 
 \subsection{Via un second dépôt}
 
