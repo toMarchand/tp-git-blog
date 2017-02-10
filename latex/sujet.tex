@@ -53,7 +53,7 @@ Attention, la date de publication est au format iso 8601.
 Vous pouvez par exemple faire un article avec les réponses à ce TP.
 
 À l'aide de <<git add>>, <<git commit>> et <<git log>>, l'ajouter dans l'index comme fichier à suivre, puis validez le changement. 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * a0712c7 (HEAD -> master) Add my first article
 \end{verbatim}
@@ -81,7 +81,7 @@ title = "Mes réponses au TP Git"
 
 \end{verbatim}
 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * b7f0aaa (HEAD -> master) Add some content in my article
 * a0712c7 Add my first article
@@ -95,7 +95,7 @@ Comment obtenir le diff entre les 2 derniers commits ?
 \item Supprimez l'article <<content/lego.md>> puis validez un nouveau commit. 
 \end{itemize}
 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * 8c18094 (HEAD -> master) Remove article about Lego
 * c33514e Add article about Lego
@@ -106,7 +106,7 @@ La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
 Que voit-on dans l'historique ?
 Comment, à l'aide de la commande <<git checkout>> peut-on retrouver le fichier en question ?
 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * 8c18094 (master) Remove article about Lego
 * c33514e (HEAD) Add article about Lego
@@ -128,7 +128,7 @@ Ajoutez quelques informations dans votre article sans valider un nouveau commit.
 
 Comment faire pour annuler le travail et revenir à la dernier version <<commité>> du fichier ?
 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * 8c18094 (HEAD -> master) Remove article about Lego
 * c33514e Add article about Lego
@@ -142,7 +142,7 @@ La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
 
 Comment faire pour annuler ce dernier commit et revenir avec une copie de travail sans ce dernier fichier en HEAD ?
 
-La commande <<git log --oneline --decorate --graph --all>> devrait vous donnez :
+La commande <<git log --oneline --decorate --graph --all>> devrait vous donner :
 \begin{verbatim}
 * 655dc4c (HEAD -> master) Cancel "Add personal details in my article"
 * 8d292f3 Add personal details in my article
